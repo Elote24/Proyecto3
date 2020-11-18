@@ -4,8 +4,8 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools">
 <data>
     <variable
-        name="character"
-        type="com.elliot.breakingbadapp.models.Character" />
+        name="quote"
+        type="com.elliot.breakingbadapp.models.Quote" />
 </data>
 
 <com.google.android.material.card.MaterialCardView
@@ -23,58 +23,46 @@ xmlns:tools="http://schemas.android.com/tools">
         android:background="@color/colorVerde">
 
 
-        <ImageView
-            android:id="@+id/imageViewProfile"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            imageUrl="@{character.img}"
-            />
-
         <TextView
-            android:id="@+id/textViewNameCharacter"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:text="Quote"
             android:textColor="@color/colorNegro"
-            android:text="@{character.name}"
-            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorNegro"
             android:layout_marginTop="8dp"
-            android:text="@{character.status}"
-            statusColor="@{character.status}"
-            app:layout_constraintStart_toStartOf="@+id/textViewNameCharacter"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNameCharacter" />
+            android:text="@{quote.quote}"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Serie: "
             android:textColor="@color/colorNegro"
-            android:text="Category"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toTopOf="@+id/textView3" />
-
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
-            android:id="@+id/textViewCategoryCharacter"
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorNegro"
             android:layout_marginTop="8dp"
-            android:text="@{character.category}"
+            android:text="@{quote.series}"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 

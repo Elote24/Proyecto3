@@ -11,6 +11,7 @@ import com.elliot.breakingbadapp.R
 import com.elliot.breakingbadapp.databinding.CardCharacterBinding
 import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.models.CharacterView
+import com.elliot.breakingbadapp.views.CategoryCharacterActivity
 import com.elliot.breakingbadapp.views.IndividualCharacter
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.card_character.view.*
@@ -37,12 +38,19 @@ class CharacterAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             val characterView = listCharacters[position]
             holder.onBind(characterView)
 
-
-            holder.itemView.setOnClickListener {
-                val intent = Intent(holder.itemView.context, IndividualCharacter::class.java)
+            holder.itemView.imageViewProfile.setOnClickListener{
+                var intent = Intent(it.context,IndividualCharacter::class.java)
                 intent.putExtra("name",characterView.name)
-                holder.itemView.context.startActivity(intent)
+                it.context.startActivity(intent)
             }
+            holder.itemView.textViewCategoryCharacter.setOnClickListener{
+                var intent = Intent(it.context,CategoryCharacterActivity::class.java)
+                intent.putExtra("category",characterView.category)
+                it.context.startActivity(intent)
+            }
+
+
+
         }
 
     }
@@ -55,6 +63,7 @@ class CharacterAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun onBind(characterView: Character) {
             cardCharacterBinding.character = characterView
             cardCharacterBinding.executePendingBindings()
+
         }
 
     }

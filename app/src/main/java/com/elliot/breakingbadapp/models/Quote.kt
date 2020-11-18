@@ -1,4 +1,6 @@
+package com.elliot.breakingbadapp.models
 import com.google.gson.annotations.SerializedName
+
 
 
 data class Quote (

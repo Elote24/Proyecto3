@@ -19,8 +19,9 @@ class IndividualCharacter : AppCompatActivity() {
         //Inflar la actividad
         val binding:ActivityIndividualCharacterBinding= DataBindingUtil.setContentView(this,R.layout.activity_individual_character)
 
-        val Name= intent.extras?.getString("name")
-        Log.d("Name",Name!!)
+
+        val name= intent.extras?.getString("name")
+        Log.d("name",name!!)
 
 
         IndividualCharacterViewModel.characterLiveData.observe(this,
@@ -30,7 +31,7 @@ class IndividualCharacter : AppCompatActivity() {
             }
         )
 
-        IndividualCharacterViewModel.getCharacter(Name)
+        IndividualCharacterViewModel.getCharacter(name)
 
 
     }
