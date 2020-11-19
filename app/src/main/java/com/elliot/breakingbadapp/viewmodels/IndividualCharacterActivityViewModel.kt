@@ -12,7 +12,7 @@ class IndividualCharacterActivityViewModel(application: Application) : AndroidVi
     private val breakingBadRepository = BreakingBadRepository();
     val characterLiveData = MutableLiveData<Character>()
 
-    fun getCharacter(name:String) {
+    fun getCharacterByName(name:String) {
         viewModelScope.launch {
             val character=breakingBadRepository.getCharacterByName(name)
             characterLiveData.postValue(character)

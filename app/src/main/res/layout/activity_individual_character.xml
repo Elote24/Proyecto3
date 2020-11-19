@@ -11,6 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorNegro"
     tools:context=".views.IndividualCharacter">
 
         <TextView
@@ -19,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{character.name}"
-            android:textColor="@color/colorNegro"
+            android:textColor="@color/colorBlanco"
+            android:background="@color/colorVerde"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="First Season of Apparance"
+            android:text="Season of Apparance"
             android:textColor="@color/colorVerde"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -123,8 +125,8 @@
             android:layout_marginTop="8dp"
             android:text="@{character.portrayed}"
             android:textColor="@color/colorBlanco"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 
 

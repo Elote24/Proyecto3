@@ -1,8 +1,10 @@
 package com.elliot.breakingbadapp.models
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 
-
+@Parcelize
 data class Character (
 
 	@SerializedName("char_id") val char_id : Int,
@@ -16,4 +18,4 @@ data class Character (
 	@SerializedName("portrayed") val portrayed : String,
 	@SerializedName("category") val category : String,
 	@SerializedName("better_call_saul_appearance") val better_call_saul_appearance : List<Int>
-)
+): Parcelable

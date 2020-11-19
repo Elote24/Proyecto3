@@ -2,7 +2,6 @@ package com.elliot.breakingbadapp.repositories
 
 import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.models.Quote
-import com.elliot.breakingbadapp.models.QuoteView
 import com.elliot.breakingbadapp.net.RetrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
@@ -37,7 +36,6 @@ class BreakingBadRepository {
                 override fun onResponse(call: Call<Character>, response: Response<Character>) {
                     it.resume(response.body()!!)
                 }
-
                 override fun onFailure(call: Call<Character>, t: Throwable) {
                     it.resumeWithException(t)
                 }

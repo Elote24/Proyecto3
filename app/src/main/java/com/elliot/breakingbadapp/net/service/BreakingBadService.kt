@@ -2,7 +2,6 @@ package com.elliot.breakingbadapp.net.service
 
 import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.models.Quote
-import com.elliot.breakingbadapp.models.QuoteView
 import retrofit2.Call
 import retrofit2.http.*
 

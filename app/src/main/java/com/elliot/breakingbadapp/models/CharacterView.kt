@@ -1,13 +1,15 @@
 package com.elliot.breakingbadapp.models
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class CharacterView (
-    var image: String,
     var name: String,
+    var image: String,
     var birthday: String,
-    var occupation: List<String>,
-    var status: String,
+    var occupation: String,
     var nickname: String,
-    var appearance:List<String>,
-    var portrayed: String,
-    var category:List<String>
-)
+    var appearance: String,
+    var portrayed:String
+): Parcelable

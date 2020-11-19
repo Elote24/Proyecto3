@@ -3,11 +3,8 @@ package com.elliot.breakingbadapp.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.elliot.breakingbadapp.databinding.CardCharacterBinding
 import com.elliot.breakingbadapp.databinding.CardQuotesBinding
-import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.models.Quote
-import com.elliot.breakingbadapp.models.QuoteView
 
 class QuoteAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
