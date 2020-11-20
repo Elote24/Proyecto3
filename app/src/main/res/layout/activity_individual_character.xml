@@ -37,6 +37,7 @@
             app:layout_constraintTop_toBottomOf="@id/textView2"
             imageUrl="@{character.img}"
              />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -44,6 +45,7 @@
             android:layout_marginTop="8dp"
             android:text="Birthday"
             android:textColor="@color/colorVerde"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/imageViewProfile"
             app:layout_constraintTop_toBottomOf="@+id/imageViewProfile" />
         <TextView
@@ -53,6 +55,7 @@
             android:layout_marginTop="8dp"
             android:text="@{character.birthday}"
             android:textColor="@color/colorBlanco"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
         <TextView
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Occupation"
+            android:textSize="20sp"
             android:textColor="@color/colorVerde"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -69,6 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textSize="20sp"
             android:text="@{character.occupation.toString()}"
             android:textColor="@color/colorBlanco"
             app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -79,6 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Nickname"
+            android:textSize="20sp"
             android:textColor="@color/colorVerde"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -88,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{character.nickname}"
+            android:textSize="20sp"
             android:textColor="@color/colorBlanco"
             app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -97,6 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Season of Apparance"
+            android:textSize="20sp"
             android:textColor="@color/colorVerde"
             app:layout_constraintStart_toStartOf="@+id/textView8"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -115,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Actor"
+            android:textSize="20sp"
             android:textColor="@color/colorVerde"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -123,6 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textSize="20sp"
             android:text="@{character.portrayed}"
             android:textColor="@color/colorBlanco"
             app:layout_constraintStart_toStartOf="@+id/textView11"

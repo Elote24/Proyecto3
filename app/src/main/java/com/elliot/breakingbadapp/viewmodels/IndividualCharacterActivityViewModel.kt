@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class IndividualCharacterActivityViewModel(application: Application) : AndroidViewModel(application) {
     private val breakingBadRepository = BreakingBadRepository();
-    val characterLiveData = MutableLiveData<Character>()
+    val characterLiveData = MutableLiveData<List<Character>>()
 
     fun getCharacterByName(name:String) {
         viewModelScope.launch {

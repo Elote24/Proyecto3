@@ -24,7 +24,7 @@ class CategoryCharacterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding:ActivityCategoryCharacterBinding=DataBindingUtil.setContentView(this,R.layout.activity_category_character)
 
-        val character= intent.getParcelableExtra<Character>("Personaje1")
+        val category= intent.extras?.getString("category")
 
 
         val recyclerViewData = findViewById<RecyclerView>(R.id.recyclerViewDcategory)
@@ -37,11 +37,11 @@ class CategoryCharacterActivity : AppCompatActivity() {
         CategoryCharacterViewModel.listCharacterLiveData.observe(this,
             Observer<List<Character>> {
                 categoryAdapter.addResults(it)
-                binding.character = character
+                binding.textView.text = category
                 binding.executePendingBindings()
                 categoryAdapter.notifyDataSetChanged()
             })
 
-        CategoryCharacterViewModel.getCharactersByCategory(character!!.category)
+        CategoryCharacterViewModel.getCharactersByCategory(category!!)
     }
 }

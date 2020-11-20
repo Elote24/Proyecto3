@@ -22,7 +22,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 @BindingAdapter("imageUrl")
-fun loadImage(view: ImageView, url: String) {
+fun loadImage(view: ImageView, url: String?) {
     Glide.with(view.context)
         .load(url)
         .into(view)
@@ -34,8 +34,11 @@ fun changeColorFromStatus(textView: TextView, status: String) {
         "Alive" -> {
             textView.setTextColor(Color.GREEN)
         }
-        "Dead" -> {
+        "Deceased" -> {
             textView.setTextColor(Color.RED)
+        }
+        "Presumed dead" -> {
+            textView.setTextColor(Color.rgb(239, 127, 26))
         }
         else -> {
             textView.setTextColor(Color.GRAY)

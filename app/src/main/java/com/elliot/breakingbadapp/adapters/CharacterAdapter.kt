@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.elliot.breakingbadapp.databinding.CardCharacterBinding
 import com.elliot.breakingbadapp.models.Character
-import com.elliot.breakingbadapp.models.CharacterView
 import com.elliot.breakingbadapp.views.CategoryCharacterActivity
 import com.elliot.breakingbadapp.views.IndividualCharacter
 import kotlinx.android.synthetic.main.card_character.view.*
@@ -33,16 +32,14 @@ class CharacterAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             val characterView = listCharacters[position]
             holder.onBind(characterView)
 
-            val CharacterView :Character=characterView
-
             holder.itemView.imageViewProfile.setOnClickListener{
                 var intent = Intent(it.context,IndividualCharacter::class.java)
-                intent.putExtra("Personaje",CharacterView)
+                intent.putExtra("PersonajeN",characterView)
                 it.context.startActivity(intent)
             }
             holder.itemView.textViewCategoryCharacter.setOnClickListener{
                 var intent = Intent(it.context,CategoryCharacterActivity::class.java)
-                intent.putExtra("Personaje1",characterView)
+                intent.putExtra("category",characterView.category)
                 it.context.startActivity(intent)
             }
 
