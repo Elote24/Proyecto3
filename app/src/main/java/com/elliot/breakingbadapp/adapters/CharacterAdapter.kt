@@ -34,7 +34,7 @@ class CharacterAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
             holder.itemView.imageViewProfile.setOnClickListener{
                 var intent = Intent(it.context,IndividualCharacter::class.java)
-                intent.putExtra("PersonajeN",characterView)
+                intent.putExtra("name",characterView.name)
                 it.context.startActivity(intent)
             }
             holder.itemView.textViewCategoryCharacter.setOnClickListener{

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorNegro"
+    android:background="@color/colorVerde"
     tools:context=".views.MainActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorVerde"
+        android:background="@color/colorNegro"
         android:text="The Breaking Bad APP"
         android:textColor="@color/colorBlanco"
         android:gravity="center"
@@ -41,8 +41,9 @@
         android:id="@+id/fabActionQuote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorVerde"
+        android:backgroundTint="@color/colorBlanco"
         android:clickable="true"
+        app:borderWidth="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_buscar" />

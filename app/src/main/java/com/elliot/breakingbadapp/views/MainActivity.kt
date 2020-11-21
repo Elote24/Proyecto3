@@ -10,7 +10,6 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.Observer
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -34,11 +33,11 @@ fun changeColorFromStatus(textView: TextView, status: String) {
         "Alive" -> {
             textView.setTextColor(Color.GREEN)
         }
-        "Deceased" -> {
-            textView.setTextColor(Color.RED)
+        "Deceased"  -> {
+            textView.setTextColor(Color.rgb(222,0,0))
         }
         "Presumed dead" -> {
-            textView.setTextColor(Color.rgb(239, 127, 26))
+            textView.setTextColor(Color.rgb(222,0,0))
         }
         else -> {
             textView.setTextColor(Color.GRAY)
@@ -69,14 +68,12 @@ class MainActivity : AppCompatActivity() {
         recyclerViewData.adapter = characterAdapter
 
 
-
         mainActivityViewModel.listCharacterLiveData.observe(this,
             Observer<List<Character>> {
                 characterAdapter.addResults(it)
                 characterAdapter.notifyDataSetChanged()
             })
 
-
-                    mainActivityViewModel.getCharacters()
+        mainActivityViewModel.getCharacters()
     }
 }

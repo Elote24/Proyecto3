@@ -3,7 +3,6 @@ package com.elliot.breakingbadapp.views
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.elliot.breakingbadapp.R
 import com.elliot.breakingbadapp.adapters.CategoryAdapter
-import com.elliot.breakingbadapp.adapters.CharacterAdapter
 import com.elliot.breakingbadapp.databinding.ActivityCategoryCharacterBinding
 import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.viewmodels.CategoryCharacterViewModel

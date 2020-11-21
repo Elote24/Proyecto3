@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.elliot.breakingbadapp.models.Character
 import com.elliot.breakingbadapp.repositories.BreakingBadRepository
 import kotlinx.coroutines.launch
-import java.util.*
 
 class CategoryCharacterViewModel (application: Application) : AndroidViewModel(application) {
     private val breakingBadRepository = BreakingBadRepository();
